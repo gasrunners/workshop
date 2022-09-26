@@ -1,0 +1,41 @@
+{
+  "name": "@0xgafu/evm-fetch",
+  "version": "0.0.1",
+  "description": "Fetch onchain data from the EVM chain contracts using multicaller contract",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "author": "0xgafu.eth",
+  "license": "MIT",
+  "keywords": [
+    "Ethereum",
+    "Web3",
+    "Multicaller"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xgafu/workshop/packages/evm-fetch"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/contracts": "^5.7.0",
+    "@ethersproject/providers": "^5.7.1",
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/lodash.set": "^4.3.7",
+    "eslint": "^8.17.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.4"
+  }
+}
