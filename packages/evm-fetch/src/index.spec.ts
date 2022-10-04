@@ -6,7 +6,7 @@ describe('EVMFetch', () => {
   beforeEach(() => {
     evmFetch = new EVMFetch({
       network: Network.MAINNET,
-      provider: ''
+      provider: 'https://mainnet.infura.io/v3/'
     })
   })
 })
