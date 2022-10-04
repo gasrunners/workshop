@@ -27,7 +27,7 @@ export enum Network {
 
 export const MulticallerAddressMap = {
   '1': '0x5ba1e12693dc8f9c48aad8770482f4739beed696',
-  '42': '0x5ba1e12693dc8f9c48aad8770482f4739beed696',
+  '5': '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696',
   '137': '0x275617327c958bD06b5D6b871E7f491D76113dd8',
   '42161': '0x5ba1e12693dc8f9c48aad8770482f4739beed696'
 }
