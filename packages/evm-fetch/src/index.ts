@@ -1,6 +1,6 @@
 import { FunctionFragment, Interface } from '@ethersproject/abi'
 import { JsonRpcProvider } from '@ethersproject/providers'
-import { Contract } from '@ethersproject/contracts'
+import { Contract, ContractInterface } from '@ethersproject/contracts'
 import set from 'lodash.set'
 
 export function add(a: number, b: number): number {
@@ -14,7 +14,7 @@ export type Call = {
   key: string
   address: string
   function: string | FunctionFragment
-  abi: any[]
+  abi: ContractInterface
   params?: any[]
 }
 
@@ -48,6 +48,16 @@ export class EVMFetch {
   public options?: Record<string, any> | null
   public requireAll?: boolean | null
 
+  /**
+   * Initialize multicaller instance.
+   * 
+   * @param {Network} args.network - Network to make contract calls on.
+   * @param {JsonRpcProvider|string} args.provider - RPC URL or Ethers.js
+   * JsonRpcProvider for making contract calls.
+   * @param {Record<string,any>} args.options - Global options for all contract calls.
+   * @param {boolean} args.requireAll - Requires all calls to be
+   * successful, otherwise can return partial results.
+   */
   constructor({ network = null, provider = null, options = {}, requireAll = false } = args) {
     if (!network) throw new Error('Must pass network argument')
     if (!provider) throw new Error('Must pass provider argument')
@@ -59,7 +69,13 @@ export class EVMFetch {
   }
 
   /**
-   * @summary Adds a contract call to the calls array.
+   * Adds a contract call to the calls array.
+   * 
+   * @param {string} callParams.key - Key to use for results object.
+   * @param {address} callParams.address - Contract address for call.
+   * @param {string|FunctionFragment} callParams.function - Function to call on contract.
+   * @param {ContractInterface} callParams.abi - Contract ABI.
+   * @param {any[]} callParams.params - Contract function input params.
    */
   public addCall(callParams: Call): EVMFetch {
     this.calls.push(callParams)
@@ -67,19 +83,24 @@ export class EVMFetch {
     return this
   }
 
-  public async fetch<T>(from?: any): Promise<T> {
+  /**
+   * Executes all calls added via addCall.
+   * 
+   * @param {Object} from - An object to inject with results of calls.
+   * @returns Object with results at specified key paths.
+   */
+  public async fetch<T>(from?: Object): Promise<T> {
     const obj = from || {}
     const result = await this._fetch()
     result.forEach((r, i) => set(obj, this.paths[i], r))
     this.calls = []
     this.paths = []
-    return obj
+    return obj as T
   }
 
   /**
    * PRIVATE METHODS
    */
-
   private async _fetch<T>(): Promise<(T | null)[]> {
     const multicaller = this.getMulticallerInstance()
     const interfaces = this.callInterfaces()
