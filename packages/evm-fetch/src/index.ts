@@ -14,13 +14,13 @@ export type Call = {
   key: string
   address: string
   function: string | FunctionFragment
-  abi: ContractInterface
+  abi: any
   params?: any[]
 }
 
 export enum Network {
   MAINNET = '1',
-  KOVAN = '42',
+  GOERLI = '5',
   POLYGON = '137',
   ARBITRUM = '42161'
 }
