@@ -54,8 +54,8 @@ export class EVMFetch {
    * @param {Network} args.network - Network to make contract calls on.
    * @param {JsonRpcProvider|string} args.provider - RPC URL or Ethers.js
    * JsonRpcProvider for making contract calls.
-   * @param {Record<string,any>} args.options - Global options for all contract calls.
-   * @param {boolean} args.requireAll - Requires all calls to be
+   * @param {Record<string,any>} [args.options={}] - Global options for all contract calls.
+   * @param {boolean} [args.requireAll=false] - Requires all calls to be
    * successful, otherwise can return partial results.
    */
   constructor({ network = null, provider = null, options = {}, requireAll = false } = args) {
