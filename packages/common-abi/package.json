@@ -1,0 +1,29 @@
+{
+  "name": "@0xgafu/common-abi",
+  "version": "1.0.0",
+  "description": "Common Ethereum contract ABIs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xgafu/workshop/tree/main/packages/common-abi"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ethereum",
+    "abi",
+    "contracts",
+    "solidity",
+    "web3"
+  ],
+  "author": "0xgafu.eth",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^6.3.0"
+  }
+}

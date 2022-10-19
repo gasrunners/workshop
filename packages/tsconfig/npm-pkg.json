@@ -5,6 +5,7 @@
   "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "target": "ES6"
+    "target": "ES6",
+    "inlineSourceMap": true
   }
 }

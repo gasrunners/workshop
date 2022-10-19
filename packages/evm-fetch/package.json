@@ -1,5 +1,6 @@
 {
   "name": "@0xgafu/evm-fetch",
+  "private": true,
   "version": "0.0.1",
   "description": "Fetch onchain data from the EVM chain contracts using multicaller contract",
   "main": "dist/index.js",
@@ -8,7 +9,6 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
