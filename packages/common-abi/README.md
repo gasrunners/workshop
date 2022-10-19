@@ -16,13 +16,14 @@ import { ERC20_ABI, ERC721_ABI } from '@0xgafu/common-abi'
 ```
 
 ## ABIs
-The ABIs included are listed below:
-- BalancerVault
-- EnsPublicResolver
-- EnsRegistrar
-- ERC20
-- ERC1155
-- Multicall2
-- Weth
+The importable ABIs included are listed below:
+- BalancerVault_ABI
+- EnsPublicResolver_ABI
+- EnsRegistrar_ABI
+- ERC20_ABI
+- ERC721_ABI
+- ERC1155_ABI
+- Multicall2_ABI
+- Weth_ABI
 
 ## Contrin
