@@ -11,7 +11,11 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .js,.ts --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check '**/*.*(md|json|yaml|html)' --loglevel warn",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "author": "0xgafu.eth",
   "license": "MIT",
@@ -31,8 +35,9 @@
     "lodash.set": "^4.3.2"
   },
   "devDependencies": {
+    "@0xgafu/common-abi": "^1.0.3",
     "@types/lodash.set": "^4.3.7",
-    "eslint": "^8.17.0",
+    "eslint": "^8.20.0",
     "eslint-config-custom": "*",
     "tsconfig": "*",
     "typescript": "^4.8.3",
