@@ -1,6 +1,6 @@
 {
   "name": "@0xgafu/common-abi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common Ethereum contract ABIs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
