@@ -24,4 +24,6 @@ The importable ABIs included are listed below:
 - ERC721_ABI
 - ERC1155_ABI
 - Multicall2_ABI
+- UniswapV2Factory_ABI
+- UniswapV2Pair_ABI
 - Weth_ABI
