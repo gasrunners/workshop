@@ -13,9 +13,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
-    "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier --check '**/*.*(md|json|yaml|html)' --loglevel warn",
-    "prettier:fix": "npm run prettier -- --write"
+    "lint:fix": "npm run lint -- --fix"
   },
   "author": "0xgafu.eth",
   "license": "MIT",

@@ -30,6 +30,7 @@ module.exports = {
     "curly": ["error", "multi-line"],
     "vue/multi-word-component-names": ["off"],
     "no-console": ["off"],
-    "max-len": ["warn"]
+    "max-len": ["warn", { ignoreComments: true }],
+    "@typescript-eslint/no-explicit-any": ["off"]
   },
 };
