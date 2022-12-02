@@ -1,2 +1,2 @@
-# ⚒ Oxgafu's Workshop
-Welcome to my workshop. Feel free to have a look around.
+# ⚒ gasrunners workshop
+Welcome to our workshop, all our apps and packages are crafted in this repository.
