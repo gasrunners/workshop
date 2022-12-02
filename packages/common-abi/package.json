@@ -1,16 +1,21 @@
 {
-  "name": "@0xgafu/common-abi",
-  "version": "1.0.3",
+  "name": "@gasrunners/common-abi",
+  "version": "1.0.0",
   "description": "Common Ethereum contract ABIs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts"
+    "build": "node build.js",
+    "lint": "eslint . --ext .js,.ts --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix"
   },
-  "homepage": "https://github.com/0xgafu/workshop/tree/main/packages/common-abi",
+  "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/common-abi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0xgafu/workshop.git",
+    "url": "https://github.com/gasrunnners/workshop.git",
     "directory": "packages/common-abi"
   },
   "publishConfig": {
@@ -23,9 +28,13 @@
     "solidity",
     "web3"
   ],
-  "author": "0xgafu.eth",
   "license": "MIT",
   "devDependencies": {
-    "tsup": "^6.3.0"
+    "esbuild": "^0.15.16",
+    "npm-dts": "^1.3.12",
+    "eslint": "^8.20.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^4.8.3"
   }
 }

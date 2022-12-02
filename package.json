@@ -10,6 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "test:coverage": "turbo run test:coverage",
@@ -17,16 +18,17 @@
     "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "prettier": "^2.7.1",
     "turbo": "latest",
     "dotenv": "^16.0.3"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.0"
   },
-  "packageManager": "npm@8.18.0"
+  "packageManager": "pnpm@7.17.1"
 }
