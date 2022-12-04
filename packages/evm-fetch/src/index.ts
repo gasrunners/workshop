@@ -38,6 +38,10 @@ export type Args = {
 }
 const args: Args = {}
 
+/**
+ * EVMFetch is a simple wrapper around a Multicaller contract for fetching
+ * onchain data.
+ */
 export class EVMFetch {
   public address: string
   public provider: JsonRpcProvider

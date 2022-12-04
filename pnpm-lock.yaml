@@ -56,10 +56,10 @@ importers:
 
   packages/evm-fetch:
     specifiers:
-      '@0xgafu/common-abi': ^1.0.3
       '@ethersproject/abi': ^5.7.0
       '@ethersproject/contracts': ^5.7.0
       '@ethersproject/providers': ^5.7.1
+      '@gasrunners/common-abi': ^1.0.0
       '@types/lodash.set': ^4.3.7
       esbuild: ^0.15.16
       eslint: ^8.20.0
@@ -75,7 +75,7 @@ importers:
       '@ethersproject/providers': 5.7.2
       lodash.set: 4.3.2
     devDependencies:
-      '@0xgafu/common-abi': 1.0.3
+      '@gasrunners/common-abi': link:../common-abi
       '@types/lodash.set': 4.3.7
       esbuild: 0.15.16
       eslint: 8.28.0
@@ -89,10 +89,6 @@ importers:
     specifiers: {}
 
 packages:
-
-  /@0xgafu/common-abi/1.0.3:
-    resolution: {integrity: sha512-DljMakcTjq4dsIqgTWhi6f9DLCV8gq0TI6gg9Uw1FqCqKaESmmnpG54om+bhFyhMK5JnXKOWHEo6eYyD9QZgWA==}
-    dev: true
 
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}

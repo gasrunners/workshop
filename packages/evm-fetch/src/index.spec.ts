@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { EVMFetch, MulticallerAddressMap, Network } from './index'
-import { ERC20_ABI } from '@0xgafu/common-abi'
+import { ERC20_ABI } from '@gasrunners/common-abi'
 
 dotenv.config()
 
