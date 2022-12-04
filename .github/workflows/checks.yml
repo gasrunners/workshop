@@ -30,11 +30,11 @@ jobs:
           version: 7.18.0
 
       - name: Fetch packages
-        run: pnpm fetch --prod
+        run: pnpm fetch
 
 
       - name: Install Dependencies
-        run: pnpm install -r --offline --prod
+        run: pnpm install -r --offline
 
       - name: Run tests
         run: npm run test
@@ -56,11 +56,11 @@ jobs:
           version: 7.18.0
 
       - name: Fetch packages
-        run: pnpm fetch --prod
+        run: pnpm fetch
 
 
       - name: Install Dependencies
-        run: pnpm install -r --offline --prod
+        run: pnpm install -r --offline
 
       - name: Run linter
         run: npm run lint
