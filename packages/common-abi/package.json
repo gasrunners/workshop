@@ -1,9 +1,10 @@
 {
   "name": "@gasrunners/common-abi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common Ethereum contract ABIs",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],

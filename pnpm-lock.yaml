@@ -59,7 +59,7 @@ importers:
       '@ethersproject/abi': ^5.7.0
       '@ethersproject/contracts': ^5.7.0
       '@ethersproject/providers': ^5.7.1
-      '@gasrunners/common-abi': ^1.0.0
+      '@gasrunners/common-abi': ^1.0.1
       '@types/lodash.set': ^4.3.7
       esbuild: ^0.15.16
       eslint: ^8.20.0

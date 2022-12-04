@@ -37,7 +37,7 @@
     "lodash.set": "^4.3.2"
   },
   "devDependencies": {
-    "@gasrunners/common-abi": "^1.0.0",
+    "@gasrunners/common-abi": "^1.0.1",
     "@types/lodash.set": "^4.3.7",
     "eslint": "^8.20.0",
     "eslint-config-custom": "*",
