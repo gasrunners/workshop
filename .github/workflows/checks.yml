@@ -29,11 +29,12 @@ jobs:
         with:
           version: 7.18.0
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Fetch packages
+        run: pnpm fetch --prod
 
-      - name: Build packages
-        run: pnpm build
+
+      - name: Install Dependencies
+        run: pnpm install -r --offline --prod
 
       - name: Run tests
         run: npm run test
@@ -54,11 +55,12 @@ jobs:
         with:
           version: 7.18.0
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Fetch packages
+        run: pnpm fetch --prod
 
-      - name: Build packages
-        run: pnpm build
+
+      - name: Install Dependencies
+        run: pnpm install -r --offline --prod
 
       - name: Run linter
         run: npm run lint
