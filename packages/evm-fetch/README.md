@@ -1,4 +1,4 @@
-# Common ABI
+# EVMFetch
 
 [![npm
 (tag)](https://img.shields.io/npm/v/@gasrunners/evm-fetch)](https://www.npmjs.com/package/@gasrunners/evm-fetch)
