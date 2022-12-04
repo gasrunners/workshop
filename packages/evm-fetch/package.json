@@ -1,7 +1,7 @@
 {
   "name": "@gasrunners/evm-fetch",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Fetch onchain data from the EVM chain contracts using multicaller contract",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,14 +16,19 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "Ethereum",
     "Web3",
     "Multicaller"
   ],
+  "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/evm-fetch",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gasrunnners/workshop/packages/evm-fetch"
+    "url": "https://github.com/gasrunnners/workshop.git",
+    "directory": "packages/evm-fetch"
   },
   "dependencies": {
     "@ethersproject/abi": "^5.7.0",
