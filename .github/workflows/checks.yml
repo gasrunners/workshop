@@ -27,14 +27,13 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         with:
-          version: 7.18.0
-
-      - name: Fetch packages
-        run: pnpm fetch
-
+          version: 7
 
       - name: Install Dependencies
-        run: pnpm install -r --offline
+        run: pnpm install
+
+      - name: Build local packages
+        run: pnpm build
 
       - name: Run tests
         run: npm run test
@@ -53,14 +52,10 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         with:
-          version: 7.18.0
-
-      - name: Fetch packages
-        run: pnpm fetch
-
+          version: 7
 
       - name: Install Dependencies
-        run: pnpm install -r --offline
+        run: pnpm install
 
       - name: Run linter
         run: npm run lint
