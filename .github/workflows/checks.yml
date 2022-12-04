@@ -32,11 +32,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build local packages
-        run: pnpm build
-
       - name: Run tests
-        run: npm run test
+        run: pnpm run test
 
   lint:
     name: Lint
@@ -58,4 +55,4 @@ jobs:
         run: pnpm install
 
       - name: Run linter
-        run: npm run lint
+        run: pnpm run lint
