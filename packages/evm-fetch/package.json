@@ -9,16 +9,12 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
     "lint:fix": "npm run lint -- --fix"
   },
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "Ethereum",
     "Web3",
