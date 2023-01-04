@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable max-len */
 export { default as BalancerVault_ABI } from './abi/BalancerVault.abi.json'
 export { default as EnsPublicResolver_ABI } from './abi/EnsPublicResolver.abi.json'

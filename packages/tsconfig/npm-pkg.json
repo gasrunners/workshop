@@ -2,10 +2,20 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "NPM Package",
   "extends": "./base.json",
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "target": "ES6",
-    "inlineSourceMap": true
+    "lib": ["ES2022"],
+    "module": "ES2022",
+    "target": "ES2022",
+    
+    "strict": true,
+    "inlineSourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true
   }
 }
