@@ -1,6 +1,6 @@
 {
   "name": "@gasrunners/create-pkg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create new npm package from template.",
   "scripts": {
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
@@ -21,13 +21,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [
-    "ethereum",
-    "abi",
-    "contracts",
-    "solidity",
-    "web3"
-  ],
+  "keywords": [],
   "license": "MIT",
   "devDependencies": {
     "chalk": "^4.1.2",
