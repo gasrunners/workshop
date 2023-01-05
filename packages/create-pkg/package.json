@@ -1,0 +1,44 @@
+{
+  "name": "@gasrunners/create-pkg",
+  "version": "0.0.1",
+  "description": "Create new npm package from template.",
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "bin": {
+    "@gasrunners/create-pkg": "bin/index.js"
+  },
+  "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/create-pkg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gasrunnners/workshop.git",
+    "directory": "packages/common-abi"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ethereum",
+    "abi",
+    "contracts",
+    "solidity",
+    "web3"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1",
+    "eslint": "^8.20.0",
+    "eslint-config-custom": "*",
+    "fs-extra": "^11.1.0",
+    "replace-in-file": "^6.3.5",
+    "tsconfig": "*",
+    "tsup": "^6.5.0",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.4"
+  }
+}
