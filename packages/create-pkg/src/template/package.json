@@ -34,6 +34,8 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
     "eslint": "^8.20.0",
     "tsup": "^6.5.0",
     "typescript": "^4.8.3",
