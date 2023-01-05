@@ -1,6 +1,6 @@
 {
   "name": "@gasrunners/create-pkg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create new npm package from template.",
   "scripts": {
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
