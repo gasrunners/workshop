@@ -1,6 +1,6 @@
 {
   "name": "runps",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parse and select package.json scripts to run from the console.",
   "main": "./dist/index",
   "module": "./dist/index.mjs",

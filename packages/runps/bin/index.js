@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { Select } = require('enquirer');
 const path = require('path')
-const { spawn } = require('child_process')
+const { spawn } = require('child_process');
 
 async function run() {
   const pkgJsonPath = path.resolve(process.cwd(), 'package.json')
@@ -29,15 +29,11 @@ async function run() {
   const pkgManager = await getPkgManager.run()
 
   console.log('Running:', pkgManager, 'run', script)
-  const cmd = spawn(pkgManager, ['run', script])
-
-  cmd.stdout.on('data', (data) => console.log(data.toString()))
-  
-  cmd.stderr.on('data', (data) => console.error(data.toString()))
-  
-  cmd.on('close', (code) => {
-    console.log(`Child process exited with code ${code}`);
-  });
+  spawn(pkgManager, ['run', script], {
+    cwd: process.cwd(),
+    detached: true,
+    stdio: 'inherit'
+  })
 }
 
 (async () => {
