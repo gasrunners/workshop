@@ -1,0 +1,47 @@
+{
+  "name": "runps",
+  "version": "0.0.1",
+  "description": "Parse and select package.json scripts to run from the console.",
+  "main": "./dist/index",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index"
+    }
+  },
+  "bin": {
+    "runps": "bin/index.js"
+  },
+  "files": [],
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/runps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gasrunnners/workshop.git",
+    "directory": "packages/runps"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["cli"],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "tsup": "^6.5.0",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.4"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
+}

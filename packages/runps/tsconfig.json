@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/npm-pkg.json",
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}
