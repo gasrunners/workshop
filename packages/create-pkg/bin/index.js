@@ -40,7 +40,7 @@ async function init() {
 }
 
 async function createPkg(name) {
-  const templateDir = path.resolve(__dirname, '/template')
+  const templateDir = path.resolve(__dirname, './template')
   const newAppDir = path.resolve(name)
   const appName = path.basename(newAppDir)
 
