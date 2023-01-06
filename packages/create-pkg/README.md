@@ -4,5 +4,5 @@ command for the @gasrunners/workshop repo.
 
 ## Usage
 ```
-npx @gasrunners/create-pkg packages/<my-new-pkg>
+npx @gasrunners/create-pkg <my-new-pkg>
 ```
