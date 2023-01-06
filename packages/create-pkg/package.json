@@ -1,6 +1,6 @@
 {
   "name": "@gasrunners/create-pkg",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create new npm package from template.",
   "scripts": {
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
@@ -10,7 +10,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "bin": {
-    "@gasrunners/create-pkg": "bin/index.js"
+    "create-pkg": "bin/index.js"
   },
   "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/create-pkg",
   "repository": {
