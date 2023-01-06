@@ -17,10 +17,7 @@
   "files": [],
   "scripts": {
     "lint": "eslint . --ext .js,.ts --max-warnings 0",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "lint:fix": "npm run lint -- --fix"
   },
   "homepage": "https://github.com/gasrunnners/workshop/tree/main/packages/runps",
   "repository": {
