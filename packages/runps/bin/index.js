@@ -2,24 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { Select } = require('enquirer');
 const path = require('path')
-const { exec } = require('child_process')
-
-/**
- * Execute simple shell command (async wrapper).
- * @param {String} cmd
- * @return {Object} { stdout: String, stderr: String }
- */
-async function sh(cmd) {
-  return new Promise(function (resolve, reject) {
-    exec(cmd, (err, stdout, stderr) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve({ stdout, stderr });
-      }
-    });
-  });
-}
+const { spawn } = require('child_process')
 
 async function run() {
   const pkgJsonPath = path.resolve(process.cwd(), 'package.json')
@@ -37,7 +20,7 @@ async function run() {
   const getPkgManager = new Select(
     {
       name: 'command',
-      message: 'What is your package manager?',
+      message: 'Your package manager?',
       choices: ['npm', 'yarn', 'pnpm']
     }
   )
@@ -46,10 +29,15 @@ async function run() {
   const pkgManager = await getPkgManager.run()
 
   console.log('Running:', pkgManager, 'run', script)
-  let { stdout } = await sh(`${pkgManager} run ${script}`)
-  for (let line of stdout.split('\n')) {
-    console.log(line);
-  }
+  const cmd = spawn(pkgManager, ['run', script])
+
+  cmd.stdout.on('data', (data) => console.log(data.toString()))
+  
+  cmd.stderr.on('data', (data) => console.error(data.toString()))
+  
+  cmd.on('close', (code) => {
+    console.log(`Child process exited with code ${code}`);
+  });
 }
 
 (async () => {
