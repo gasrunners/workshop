@@ -1,7 +1,7 @@
 # runps
 
 [![npm
-(tag)](https://img.shields.io/npm/v/@gasrunners/common-abi)](https://www.npmjs.com/package/runps)
+(tag)](https://img.shields.io/npm/v/runps)](https://www.npmjs.com/package/runps)
 
 Parse and select package.json scripts to run from the console.
 
