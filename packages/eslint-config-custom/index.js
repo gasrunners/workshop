@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ["**/dist/**/*"],
+  ignorePatterns: ["**/dist/**/*", "*.cjs"],
 
   env: {
     node: true
