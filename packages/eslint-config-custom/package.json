@@ -10,7 +10,8 @@
     "eslint-config-turbo": "^0.0.4",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
-    "eslint-plugin-tailwindcss": "^3.6.2"
+    "eslint-plugin-tailwindcss": "^3.6.2",
+    "eslint-config-next": "13.1.1"
   },
   "devDependencies": {
     "typescript": "^4.8.3"

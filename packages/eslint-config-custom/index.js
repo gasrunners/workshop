@@ -6,6 +6,7 @@ module.exports = {
   },
 
   extends: [
+    "next",
     "eslint:recommended",
     'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
