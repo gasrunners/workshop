@@ -34,6 +34,7 @@ importers:
       '@types/react': ^18.0.26
       '@types/react-dom': ^18.0.10
       autoprefixer: ^10.4.7
+      bufferutil: ^4.0.7
       eslint: ^8.30.0
       eslint-config-custom: '*'
       next: 13.1.1
@@ -47,6 +48,7 @@ importers:
       superjson: 1.9.1
       tailwindcss: ^3.2.0
       typescript: ^4.9.4
+      utf-8-validate: ^6.0.0
       zod: ^3.20.2
     dependencies:
       '@gasrunners/evm-fetch': link:../../packages/evm-fetch
@@ -57,11 +59,13 @@ importers:
       '@trpc/next': 10.9.0_x4tyufyemzhcd3jbb4hcrq3eou
       '@trpc/react-query': 10.9.0_qw4miir7nnxijwjta54q3esyeq
       '@trpc/server': 10.9.0
+      bufferutil: 4.0.7
       next: 13.1.1_biqbaboplfbrettd7655fr4n2y
       next-auth: 4.18.8_q76c2b4vyoegvsbrcwkfvimnai
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       superjson: 1.9.1
+      utf-8-validate: 6.0.0
       zod: 3.20.2
     devDependencies:
       '@types/node': 18.11.18
@@ -1458,6 +1462,14 @@ packages:
       node-releases: 2.0.8
       update-browserslist-db: 1.0.10_browserslist@4.21.4
     dev: true
+
+  /bufferutil/4.0.7:
+    resolution: {integrity: sha512-kukuqc39WOHtdxtw4UScxF/WVnMFVSQVKhtx3AjZJzhd0RGZZldcrfSEbVsWWe6KNH253574cq5F+wpv0G9pJw==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.0
+    dev: false
 
   /bundle-require/3.1.2_esbuild@0.15.18:
     resolution: {integrity: sha512-Of6l6JBAxiyQ5axFxUM6dYeP/W7X2Sozeo/4EYB9sJhL+dqL7TKjg+shwxp6jlu/6ZSERfsYtIpSJ1/x3XkAEA==}
@@ -3610,6 +3622,11 @@ packages:
       - babel-plugin-macros
     dev: false
 
+  /node-gyp-build/4.6.0:
+    resolution: {integrity: sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==}
+    hasBin: true
+    dev: false
+
   /node-releases/2.0.8:
     resolution: {integrity: sha512-dFSmB8fFHEH/s81Xi+Y/15DQY6VHW81nXRj86EMSL3lmuTmK1e+aT4wrFCkTbm+gSwkw4KpX+rT/pMM2c1mF+A==}
     dev: true
@@ -4972,6 +4989,14 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /utf-8-validate/6.0.0:
+    resolution: {integrity: sha512-OCJuwxQsnG51swYmNloViggxNOFO/leOZpnb/vVeoastJbrzrZZU7lGsYlUcdkCl9nsBu2nkKLjpljb3Ckvb/Q==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.0
     dev: false
 
   /util-deprecate/1.0.2:
