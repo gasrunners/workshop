@@ -1,9 +1,10 @@
 import dotenv from 'dotenv'
+import path from 'path'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { EVMFetch, MulticallerAddressMap, Network } from './index'
 import { ERC20_ABI } from '@gasrunners/common-abi'
 
-dotenv.config()
+dotenv.config({ path: path.resolve(__dirname, './../../../.env') })
 
 describe('EVMFetch', () => {
   let evmFetch: EVMFetch
