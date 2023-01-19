@@ -1,20 +1,23 @@
 module.exports = {
-  ignorePatterns: ["**/dist/**/*", "*.cjs"],
+  ignorePatterns: ['**/dist/**/*', '*.cjs'],
 
   env: {
     node: true
   },
 
   extends: [
-    "next",
-    "eslint:recommended",
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'next',
+    'eslint:recommended',
     'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
-    "turbo",
-    "prettier"
+    'turbo',
+    'prettier'
   ],
 
   plugins: [
+    'react',
     '@typescript-eslint',
     'tailwindcss'
   ],
@@ -25,9 +28,10 @@ module.exports = {
   },
 
   rules: {
-    "curly": ["error", "multi-line"],
-    "no-console": ["off"],
-    "max-len": ["warn", { ignoreComments: true }],
-    "@typescript-eslint/no-explicit-any": ["off"]
+    'curly': ['error', 'multi-line'],
+    'no-console': ['off'],
+    'max-len': ['warn', { ignoreComments: true }],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'react/jsx-indent': [2, 2]
   },
 };
