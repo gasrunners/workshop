@@ -32,6 +32,7 @@ module.exports = {
     'no-console': ['off'],
     'max-len': ['warn', { ignoreComments: true }],
     '@typescript-eslint/no-explicit-any': ['off'],
-    'react/jsx-indent': [2, 2]
+    'react/jsx-indent': [2, 2],
+    'tailwindcss/no-custom-classname': ['off']
   },
 };
