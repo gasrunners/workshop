@@ -10,8 +10,9 @@ const Home: NextPage = () => {
         <div className="text-center">
           <h1>gasrunners</h1>
 
-          <Link href="https://twitter.com/0xgafu" external>@0xgafu</Link>
-          <Link href="https://github.com/gasrunners" external>Github</Link>
+          <Link href="https://github.com/gasrunners" external>
+            <i className="fa-brands fa-github"></i>
+          </Link>
         </div>
       </main>
     </>
