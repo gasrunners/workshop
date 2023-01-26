@@ -28,6 +28,7 @@ module.exports = {
   },
 
   rules: {
+    'semi': ['warn', 'never'],
     'curly': ['error', 'multi-line'],
     'no-console': ['off'],
     'max-len': ['warn', { ignoreComments: true }],
