@@ -28,7 +28,7 @@ const Zeroxfetch: NextPage = () => {
   function onChange(callIndex: number, callKey: keyof Call, value: string) {
     setCalls(draft => {
       const call = draft[callIndex]
-      if (call[callKey]) {
+      if (call && call[callKey]) {
         call[callKey] = callKey === 'abi' ? [value] : value
       }
     })
