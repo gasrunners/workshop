@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { Select } = require('enquirer');
+const { Select } = require('enquirer')
 const path = require('path')
-const { spawn } = require('child_process');
+const { spawn } = require('child_process')
 
 async function run() {
   const pkgJsonPath = path.resolve(process.cwd(), 'package.json')
