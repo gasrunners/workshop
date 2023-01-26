@@ -1,5 +1,5 @@
-import { EVMFetch, Network } from "@gasrunners/evm-fetch";
-import { useEffect, useState } from "react";
+import { EVMFetch, Network } from "@gasrunners/evm-fetch"
+import { useEffect, useState } from "react"
 
 export function useEvmFetch(
   { network, rpcUrl }: { network: Network, rpcUrl: string }
@@ -14,5 +14,5 @@ export function useEvmFetch(
     }))
   }, [network, rpcUrl])
   
-  return fetcher;
+  return fetcher
 }
