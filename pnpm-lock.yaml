@@ -34,6 +34,7 @@ importers:
       autoprefixer: ^10.4.7
       eslint: ^8.30.0
       eslint-config-custom: '*'
+      immer: ^9.0.18
       next: 13.1.2
       postcss: ^8.4.14
       prettier: ^2.8.1
@@ -43,6 +44,7 @@ importers:
       superjson: 1.9.1
       tailwindcss: ^3.2.0
       typescript: ^4.9.4
+      use-immer: ^0.8.1
       zod: ^3.20.2
     dependencies:
       '@gasrunners/evm-fetch': link:../../packages/evm-fetch
@@ -51,10 +53,12 @@ importers:
       '@trpc/next': 10.9.0_sji75b74l6vpjj45puor62wqge
       '@trpc/react-query': 10.9.0_qw4miir7nnxijwjta54q3esyeq
       '@trpc/server': 10.9.0
+      immer: 9.0.18
       next: 13.1.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       superjson: 1.9.1
+      use-immer: 0.8.1_immer@9.0.18+react@18.2.0
       zod: 3.20.2
     devDependencies:
       '@types/node': 18.11.18
@@ -2920,6 +2924,10 @@ packages:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
 
+  /immer/9.0.18:
+    resolution: {integrity: sha512-eAPNpsj7Ax1q6Y/3lm2PmlwRcFzpON7HSNQ3ru5WQH1/PSpnyed/HpNOELl2CxLKoj4r+bAHgdyKqW5gc2Se1A==}
+    dev: false
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -4842,6 +4850,16 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.2.0
+
+  /use-immer/0.8.1_immer@9.0.18+react@18.2.0:
+    resolution: {integrity: sha512-OfTFf1pL+ICjjcLPn9+ZnaJO/Yg4MBzYZtACEe2mZ/W2A5col28PNUnwowOAaBuOogACOK/37TU17KgsIhUpOw==}
+    peerDependencies:
+      immer: '>=2.0.0'
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      immer: 9.0.18
+      react: 18.2.0
+    dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
