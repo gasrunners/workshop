@@ -27,7 +27,7 @@ const Zeroxfetch: NextPage = () => {
 
   function onChange(callIndex: number, callKey: keyof Call, value: string) {
     setCalls(draft => {
-      const call = draft[callIndex]
+      const call = draft[callIndex] as Call
       if (call && call[callKey]) {
         call[callKey] = callKey === 'abi' ? [value] : value
       }
@@ -37,16 +37,18 @@ const Zeroxfetch: NextPage = () => {
 
   function onChangeParam(callIndex: number, index: number, value: string) {
     setCalls(draft => {
-      const call = draft[callIndex]
-      if (call) call.params[index] = value
+      const call = draft[callIndex] as Call
+      if (call && call.params?.[index]) {
+        call.params[index] = value
+      }
     })
     console.log('calls', calls)
   }
 
   function addParamTo(callIndex: number) {
     setCalls(draft => {
-      const call = draft[callIndex]
-      if (call) call.params.push('')
+      const call = draft[callIndex] as Call
+      if (call) (call.params = call.params || []).push('')
     })
     console.log('calls', calls)
   }
