@@ -17,6 +17,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
     "create:pkg": "npx @gasrunners/create-pkg",
+    "db:migrate": "turbo run db:migrate",
     "db:generate": "turbo run db:generate",
     "db:push":"turbo run db:push"
   },

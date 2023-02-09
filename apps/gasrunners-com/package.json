@@ -8,6 +8,7 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start",
+    "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
     "db:push": "prisma db push --skip-generate"
   },

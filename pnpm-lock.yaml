@@ -19,7 +19,7 @@ importers:
       tsconfig: link:packages/tsconfig
       turbo: 1.7.4
 
-  apps/gasrunners-com2:
+  apps/gasrunners-com:
     specifiers:
       '@gasrunners/evm-fetch': workspace:^1.0.0
       '@next-auth/prisma-adapter': ^1.0.5
