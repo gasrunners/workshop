@@ -26,7 +26,7 @@ evmFetch = new EVMFetch({
 })
 ```
 
-Add multical onchain calls from different contracts:
+Add onchain calls for different contracts and functions:
 
 ```ts
 evmFetch
