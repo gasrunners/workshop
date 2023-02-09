@@ -49,5 +49,5 @@ Then fetch the results:
 ```ts
 const data = await evmFetch.fetch()
 
-console.log(data) // { dai: 'Dai Stablecoin', uni: 'Uniswap' }
+console.log(data) // { dai: { name: 'Dai Stablecoin' }, uni: { name: 'Uniswap' } }
 ```
