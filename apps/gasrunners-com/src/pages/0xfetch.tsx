@@ -110,7 +110,7 @@ const Zeroxfetch: NextPage = () => {
           value={call.abi}
           onChange={e => onChange(index, 'abi', e.target.value)}
           className="border"
-          placeholder="ABI"
+          placeholder="Function signature"
         />
         <button
           onClick={e => addParamTo(index)}

@@ -4,12 +4,11 @@
   "globalEnv": ["INFURA_KEY"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "$NODE_ENV", "$VERCEL_URL", "$PORT"],
+      "dependsOn": ["^build", "^db:generate"],
       "env": ["NODE_ENV", "VERCEL_URL", "PORT"],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {
-      "dependsOn": ["$NODE_ENV", "$VERCEL_URL", "$PORT"],
       "env": ["NODE_ENV", "VERCEL_URL", "PORT"],
       "outputs": []
     },
@@ -17,6 +16,7 @@
       "outputs": []
     },
     "dev": {
+      "dependsOn": ["^db:generate"],
       "cache": false
     },
     "test": {
@@ -27,6 +27,12 @@
     },
     "test:coverage": {
       "outputs": []
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
     }
   }
 }

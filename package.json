@@ -16,7 +16,9 @@
     "test:coverage": "turbo run test:coverage",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
-    "create:pkg": "npx @gasrunners/create-pkg"
+    "create:pkg": "npx @gasrunners/create-pkg",
+    "db:generate": "turbo run db:generate",
+    "db:push":"turbo run db:push"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
